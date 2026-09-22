@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const path = window.location.pathname;
+      const repo = "/Movie-App/";
+
+      if (path.startsWith(repo)) {
+        const route = path.slice(repo.length);
+        window.location.replace(
+          repo +
+            "?redirect=" +
+            encodeURIComponent(route + window.location.search),
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
